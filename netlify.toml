@@ -5,14 +5,14 @@
     targetPort = 3003
 
 [[redirects]]
-    from = "https://www.replay.beatleader.xyz/*"
-    to = "https://replay.beatleader.xyz/:splat"
+    from = "https://www.replay.beatleader.com/*"
+    to = "https://replay.beatleader.com/:splat"
     status = 301
     force = true
 
 [[redirects]]
     from = "/cors/beat-saver2/*"
-    to = "https://beatsaver.com/:splat"
+    to = "https://replay.beatleader.com/cors/beat-saver2/:splat"
     status = 200
     force = true
     headers = {X-From = "Netlify"}
@@ -26,7 +26,7 @@
 
 [[redirects]]
     from = "/preview.png"
-    to = "https://api.beatleader.xyz/preview/replay/"
+    to = "https://api.beatleader.com/preview/replay/"
     status = 200
     force = true
     headers = {X-From = "Netlify", origin = "Netlify"}
