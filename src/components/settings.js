@@ -102,6 +102,11 @@ AFRAME.registerComponent('settings', {
 
 			autoSkipIntro: false,
 			autoSkipOutro: false,
+			autoSpeedControls: true,
+			speedNormal: 1,
+			speedSlow: 0.2,
+			offsetSlowBeginning: -0.3,
+			offsetSlowEnding: 0,
 
 			// Extensions (custom data)
 			showHeartrate: true,

@@ -761,6 +761,7 @@ AFRAME.registerComponent('song-controls', {
 				element.textContent = Math.round(value * 10000) / 10000 + 'x';
 			});
 		};
+		this._speedHandler = speedHandler
 
 		speedSlider.forEach(element => {
 			element.addEventListener('input', evt => {
@@ -1323,6 +1324,7 @@ AFRAME.registerComponent('song-controls', {
 			context.lineTo((note.time / duration) * width, height - (((note.accuracy - minAcc) / (maxAcc - minAcc)) * height + 5));
 			context2.lineTo((note.time / duration) * width, height - (((note.accuracy - minAcc) / (maxAcc - minAcc)) * height + 5));
 		});
+		this._markers = markers.filter((marker) => marker.type == 'miss' || marker.type == 'badCut' || marker.type == 'bomb')
 
 		context.lineTo((notes[notes.length - 1].time / duration) * width, height);
 		context.lineTo(0, height);
@@ -1570,6 +1572,19 @@ AFRAME.registerComponent('song-controls', {
 				playbackRate: this.song.speed,
 				position: Math.min(this.song.getCurrentTime(), this.song.source.buffer.duration),
 			});
+		}
+		if (document.getElementById("autoSpeedControls").checked) {
+			let time = this.song.getCurrentTime()
+			let speednormal = parseFloat(document.getElementById("speedNormal").value)
+			let speedslow = parseFloat(document.getElementById("speedSlow").value)
+			let offsetbegin = parseFloat(document.getElementById("offsetSlowBeginning").value)
+			let offsetend = parseFloat(document.getElementById("offsetSlowEnding").value)
+			let intersept = this._markers.filter((marker) => marker.spawnTime + offsetbegin < time && time < marker.spawnTime + offsetend)
+			if (intersept.length > 0) {
+				this._speedHandler(speedslow)
+			} else {
+				this._speedHandler(speednormal)
+			}
 		}
 	},
 
