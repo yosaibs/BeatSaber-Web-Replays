@@ -76,7 +76,7 @@
 	>
 </div>
 
-<div class="toggleButton" title="Automatically skip end of replay with no elements">
+<div class="toggleButton"  style="border-bottom: 1px solid white; margin-bottom: 4px" title="Automatically skip end of replay with no elements">
 	<label class="switch">
 		<input type="checkbox" id="autoSkipOutro" />
 		<span class="slider round"></span>
@@ -84,4 +84,57 @@
 	<label class="toggleButtonLabel"
 		><td><nobr>Auto Skip Outro</nobr></td></label
 	>
+</div>
+<div class="toggleButton" tile="Automatically change speed around missed notes">
+	<label class="switch">
+		<input type="checkbox" id="autoSpeedControls" />
+		<span class="slider round"></span>
+	</label>
+	<label class="toggleButtonLabel"
+		><td><nobr>Auto Speed Controls</nobr></td></label
+	>
+</div>
+<div class="toggleButton" title="Speed in normal-mode">
+	<label>
+		<div class="toggleButtonContainer">
+			<label class="toggleButtonLabel" style="margin-left: 5px"
+				><td><nobr>Speed mormal:</nobr></td></label
+			>
+			<label id="speedNormalLabel" class="toggleButtonLabel" style="margin-left: 50px">1</label>
+		</div>
+		<input id="speedNormal" class="settingRange" type="range" min="0" max="2" step="0.01" value="1" />
+	</label>
+</div>
+<div class="toggleButton" title="Speed in slow-mode">
+	<label>
+		<div class="toggleButtonContainer">
+			<label class="toggleButtonLabel" style="margin-left: 5px"
+				><td><nobr>Speed slow:</nobr></td></label
+			>
+			<label id="speedSlowLabel" class="toggleButtonLabel" style="margin-left: 50px">0.2</label>
+		</div>
+		<input id="speedSlow" class="settingRange" type="range" min="0" max="1" step="0.01" value="0.2" />
+	</label>
+</div>
+<div class="toggleButton" title="Offset seconds for slow-mode-beginning">
+	<label>
+		<div class="toggleButtonContainer">
+			<label class="toggleButtonLabel" style="margin-left: 5px"
+				><td><nobr>Offset seconds for slow-mode-beginning:</nobr></td></label
+			>
+			<label id="offsetSlowBeginningLabel" class="toggleButtonLabel" style="margin-left: 190px">-0.3</label>
+		</div>
+		<input id="offsetSlowBeginning" class="settingRange" type="range" min="-1" max="1" step="0.01" value="-0.3" />
+	</label>
+</div>
+<div class="toggleButton" title="Offset seconds for slow-mode-ending">
+	<label>
+		<div class="toggleButtonContainer">
+			<label class="toggleButtonLabel" style="margin-left: 5px"
+				><td><nobr>Offset seconds for slow-mode-ending:</nobr></td></label
+			>
+			<label id="offsetSlowEndingLabel" class="toggleButtonLabel" style="margin-left: 190px">0</label>
+		</div>
+		<input id="offsetSlowEnding" class="settingRange" type="range" min="-1" max="1" step="0.01" value="0" />
+	</label>
 </div>
