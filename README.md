@@ -1,4 +1,4 @@
-# Beat Saber Web Replays(In Japanese)
+# Beat Saber Web Replays(I will provide the English explanation later.)
 
  - こちらは [Beat Saver Web Replays](https://github.com/BeatLeader/BeatSaber-Web-Replays) の改造版です。自動スピード変更機能（ミスの周辺とそれ以外で再生スピードを変える）が追加されています。
  - デフォルトでは自動スピード変更機能はオンになっており、設定の Playback からオン/オフ切り替えと各種設定ができます。
@@ -47,7 +47,7 @@ netlify dev
 
 --------------------
 
-# Beat Saber Web Replays (In English translated by copilot)
+# Beat Saber Web Replays (translated by copilot)
 
 - This is a modified version of [Beat Saver Web Replays](https://github.com/BeatLeader/BeatSaber-Web-Replays). It features an automatic speed adjustment function (the playback speed changes depending on whether you are near a miss or not).
 - By default, the automatic speed adjustment is turned on. You can toggle it on/off and configure its settings in the Playback settings.
