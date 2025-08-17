@@ -37,6 +37,8 @@ netlify dev
 ## 設定
  
  - Playback の設定の末尾に改造版の設定項目があります。変更した設定は本家同様にブラウザに保存されます。
+ - <img width="847" height="744" alt="image" src="https://github.com/user-attachments/assets/d369b659-e01a-46ca-887d-65f02eb3b95b" />
+
    - Auto Speed Controls: 自動スピード変更機能のオンオフ。デフォルトオン
    - Speed normal: ミスが近くにない時の再生速度。デフォルト1。範囲は(0,2]。
    - Speed slow: ミスが近くにある時の再生速度。デフォルト0.2。範囲は(0,1]。
