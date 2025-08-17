@@ -1,4 +1,4 @@
-# Beat Saber Web Replays
+# Beat Saber Web Replays(In Japanese)
 
  - こちらは [Beat Saver Web Replays](https://github.com/BeatLeader/BeatSaber-Web-Replays) の改造版です。自動スピード変更機能（ミスの周辺とそれ以外で再生スピードを変える）が追加されています。
  - デフォルトでは自動スピード変更機能はオンになっており、設定の Playback からオン/オフ切り替えと各種設定ができます。
@@ -44,4 +44,52 @@ netlify dev
    - Speed slow: ミスが近くにある時の再生速度。デフォルト0.2。範囲は(0,1]。
    - Offset seconds for slow-mode-beginning: ミスしたノーツのどのくらい前から再生スピードがスローに変化するかの値。デフォルト-0.3。単位は秒。マイナス方向に行けば行くほどスローになるのが早くなる。範囲は[-1,1]。
    - Offset sedonds for slow-mode-ending: ミスしたノーツのどのくらいあとから再生スピードがノーマルに戻るかの値。デフォルト0。単位は秒。プラス方向に行けば行くほどノーマルに戻るのが遅くなる。範囲は[-1,1]。
-   
+
+--------------------
+
+# Beat Saber Web Replays (In English translated by copilot)
+
+- This is a modified version of [Beat Saver Web Replays](https://github.com/BeatLeader/BeatSaber-Web-Replays). It features an automatic speed adjustment function (the playback speed changes depending on whether you are near a miss or not).
+- By default, the automatic speed adjustment is turned on. You can toggle it on/off and configure its settings in the Playback settings.
+- Use at your own risk. We may not be able to respond to inquiries.
+
+## Confirmed Working Environments
+- OS: Windows
+- Browsers: Chrome/Firefox
+
+## Prerequisites
+
+- Install [nodejs](https://nodejs.org/en/)
+- Clone the master branch of this repository to your local machine
+- Move to the top-level folder of the cloned repository in the command prompt, then run the following command:
+```
+npm install
+```
+- Install Netlify CLI globally by running the following command anywhere in the command prompt:
+```
+npm install netlify-cli -g
+```
+
+## Usage
+
+- In the command prompt, move to the top-level folder of the cloned repository and run:
+```
+netlify dev
+```
+- Access [localhost:9999](http://localhost:9999) in your browser to use the modified Beat Saver Web Replays. (Running the above command will start a local server.)
+  - As with the original, you can view replays by the following methods:
+    - Open a URL with the scoreId appended to the end
+    - After clicking the screen, select a file in the bsor format from the file selection dialog that appears (bsor files are located at {Where Beat Saber is installed}\UserData\BeatLeader\Replays)
+    - Drag and drop a bsor file
+- Note: The local server will stop if you press Ctrl-C in the command prompt running the netlify command or if you close the command prompt window.
+
+## Settings
+
+- Additional settings for the modified version are available at the end of the Playback settings. Changed settings are saved in your browser, just like the original.
+- <img width="847" height="744" alt="image" src="https://github.com/user-attachments/assets/d369b659-e01a-46ca-887d-65f02eb3b95b" />
+
+  - Auto Speed Controls: Toggle automatic speed adjustment. On by default.
+  - Speed normal: Playback speed when not near a miss. Default is 1. Range is (0,2].
+  - Speed slow: Playback speed when near a miss. Default is 0.2. Range is (0,1].
+  - Offset seconds for slow-mode-beginning: How many seconds before a missed note the slow speed should start. Default is -0.3. Unit is seconds. Negative values mean it starts before the miss.
+  - Offset seconds for slow-mode-ending: How many seconds after a missed note the speed returns to normal. Default is 0. Unit is seconds. Positive values mean it ends after the miss.
