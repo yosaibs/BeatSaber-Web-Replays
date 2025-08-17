@@ -27,12 +27,12 @@ npm install netlify-cli -g
 ```
 netlify dev
 ```
- - ブラウザで[localhost:9999](http://localhost:9999)にアクセスすると改造版 Beat Saver Web Replays が利用できます。（上記コマンドを打つと既定のブラウザでlocalhost:9999が開きます。）
+ - ブラウザで[localhost:9999](http://localhost:9999)にアクセスすると改造版 Beat Saver Web Replays が利用できます。（上記コマンドを打つと、ローカルサーバーが起動し、既定のブラウザでlocalhost:9999が開きます。）
    - 本家と同様に以下の手段でリプレイを表示できます。
      - url 末尾に scoreId をつけて開く
      - 画面をクリックした後開かれるファイル選択画面で、bsor 形式のファイルを選択する。（bsorファイルは {Beat Saberが置いてある場所}\UserData\BeatLeader\Replays 以下に置いてあります。 ）
      - bsor 形式のファイルをドラッグアンドドロップする
- - ちなみに netlify コマンドを打ったコマンドプロンプト上でCtrl-Cを押すとローカルサーバーが終了します
+ - ちなみに netlify コマンドを打ったコマンドプロンプト上でCtrl-Cを押すか、コマンドプロンプトを閉じるとローカルサーバーが終了します
 
 ## 設定
  
